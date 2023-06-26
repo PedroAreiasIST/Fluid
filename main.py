@@ -27,15 +27,15 @@ def mse(y_test, y_pred):
                                          y_pred)
 
 # begin data reading
-heart_disease =  pd.read_csv(data_path, header=None, delim_whitespace=True)
-heart_disease.replace([np.inf, -np.inf], np.nan, inplace=True)
+bifunction =  pd.read_csv(data_path, header=None, delim_whitespace=True)
+bifunction.replace([np.inf, -np.inf], np.nan, inplace=True)
 # Drop rows with NaN
-heart_disease.dropna(inplace=True)
+bifunction.dropna(inplace=True)
 
-#print(heart_disease)
+#print(bifunction)
 
-x1 = heart_disease.iloc[:, 0:10].values
-y1 = heart_disease.iloc[:, 11:12].values
+x1 = bifunction.iloc[:, 0:10].values
+y1 = bifunction.iloc[:, 11:12].values
 x1=np.delete(x1,4,axis=1)
 x1=np.delete(x1,8,axis=1)
 
